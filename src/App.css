@@ -1,0 +1,27 @@
+.container{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (max-width: 767px){
+  .container{
+    max-width: 700px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+/* Початкові стилі для секцій */
+.Hero, .Project, .Contacts {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Збільшено час для плавного ефекту */
+}
+
+
+/* Стиль для анімації з'явлення */
+.Hero.fade-in, .Project.fade-in, .Contacts.fade-in{
+  opacity: 1;
+  transform: translateY(0);
+}
+

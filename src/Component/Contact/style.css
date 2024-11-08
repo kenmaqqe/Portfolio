@@ -1,0 +1,108 @@
+.ContactSection{
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+textarea{
+    height: 34px;
+}
+.Contact{
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+}
+.Contact span{
+    margin-top: 10px;
+}
+.Contact label{
+    border-left: 2px solid #000;
+}
+.Contact input, .Contact textarea{
+    border-bottom: 2px solid #000;
+}
+.Name {
+    background-color: #FFC9F0;
+}
+.Email{
+    background-color: #FFE68C;
+}
+.Text{
+    background-color: #9DDCFF;
+}
+.TextSpan {
+    display: flex;
+    align-items: end;
+}
+#Email{
+    width: 80%;
+}
+input{
+    padding-left: 5px;
+}
+.Contact .button{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-top: 15px;
+}
+.Contact button{
+    width: 150px;
+    background-color: black;
+    color: #FFF;
+    height: 50px;
+}
+.Contact button:hover{
+    transform: scale(0.95);
+    background-color: rgb(34, 30, 30);
+}
+.ContactMe h2{
+    background-color: #FFC9F0;
+    width: fit-content;
+    font-size: 24px;
+}
+.thank-you-message{
+    margin-top: 25px;
+    width: 300px;
+    background-color: #FFE68C;
+    height: 250px;
+    border: 4px solid #f8d03d;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    font-family: "Handlee";
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    animation: showtext 1.5s forwards;
+}
+@keyframes showtext{
+    from{
+        opacity: 0;
+        transform: translateX(250px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px) rotate(4deg);  
+    }
+}
+@media (max-width: 767px){
+    span{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .TextSpan{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .thank-you-message{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

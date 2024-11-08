@@ -1,0 +1,64 @@
+nav{
+    display: flex;
+    height: 75px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Handlee";
+}
+img {
+    height: 40px;
+}
+.logo{
+    margin-right: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+.buttons button{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+.buttons button::after{
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #FFC9F0; 
+    opacity: 0; 
+    transition: opacity 0.3s; 
+    z-index: -1; 
+}
+.buttons button:hover {
+    z-index: 2; 
+}
+.buttons button:hover::after {
+    opacity: 1; 
+}
+@media (max-width: 767px){
+    nav{
+        font-size: 18px;
+    }
+    .buttons{
+        max-width: 150px;
+    }
+    .logo img{
+        height: 30px;
+    }
+}
+@media (min-width: 768px){
+    nav {
+        font-size: 24px;
+    }
+    .buttons{
+        width: 200px;
+    }
+}
